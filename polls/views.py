@@ -1,10 +1,10 @@
-from django.shortcuts import render,get_object_or_404
+from django.shortcuts import render, get_object_or_404
 
 # Create your views here.
-from django.http import HttpResponse,HttpResponseRedirect,JsonResponse
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.template import loader
 from django.urls import reverse
-from .models import Question,Choice
+from .models import Question, Choice
 
 def hello(request):
     return JsonResponse({'status':1})
