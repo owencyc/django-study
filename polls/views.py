@@ -1,11 +1,13 @@
 from django.shortcuts import render,get_object_or_404
 
 # Create your views here.
-from django.http import HttpResponse,HttpResponseRedirect
+from django.http import HttpResponse,HttpResponseRedirect,JsonResponse
 from django.template import loader
 from django.urls import reverse
-from .models import Question
+from .models import Question,Choice
 
+def hello(request):
+    return JsonResponse({'status':1})
 
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
